@@ -620,31 +620,31 @@ function initActiveSegments(imports) {
   var i32ScratchView = new Int32Array(scratchBuffer);
   var f32ScratchView = new Float32Array(scratchBuffer);
   var f64ScratchView = new Float64Array(scratchBuffer);
-
+  
   function wasm2js_scratch_load_i32(index) {
     return i32ScratchView[index];
   }
-
+      
   function wasm2js_scratch_store_i32(index, value) {
     i32ScratchView[index] = value;
   }
-
+      
   function wasm2js_scratch_load_f64() {
     return f64ScratchView[0];
   }
-
+      
   function wasm2js_scratch_store_f64(value) {
     f64ScratchView[0] = value;
   }
-
+      
   function wasm2js_scratch_store_f32(value) {
     f32ScratchView[2] = value;
   }
-
+      
   function wasm2js_scratch_load_f32() {
     return f32ScratchView[2];
   }
-
+      
 function asmFunc(env) {
  var memory = env.memory;
  var buffer = memory.buffer;
@@ -19952,23 +19952,23 @@ function __unlockfile($0) {}
  function __wasm_memory_size() {
   return buffer.byteLength / 65536 | 0;
 }
-
+ 
  return {
-  "__wasm_call_ctors": __wasm_call_ctors,
-  "opus_decoder_create": opus_decoder_create,
-  "opus_decode_float": opus_decode_float,
-  "opus_decoder_ctl": opus_decoder_ctl,
-  "opus_decoder_destroy": opus_decoder_destroy,
-  "speex_resampler_init": speex_resampler_init,
-  "speex_resampler_destroy": speex_resampler_destroy,
-  "speex_resampler_process_interleaved_float": speex_resampler_process_interleaved_float,
-  "__errno_location": __errno_location,
-  "stackSave": stackSave,
-  "stackRestore": stackRestore,
-  "stackAlloc": stackAlloc,
-  "malloc": dlmalloc,
-  "free": dlfree,
-  "__indirect_function_table": FUNCTION_TABLE,
+  "__wasm_call_ctors": __wasm_call_ctors, 
+  "opus_decoder_create": opus_decoder_create, 
+  "opus_decode_float": opus_decode_float, 
+  "opus_decoder_ctl": opus_decoder_ctl, 
+  "opus_decoder_destroy": opus_decoder_destroy, 
+  "speex_resampler_init": speex_resampler_init, 
+  "speex_resampler_destroy": speex_resampler_destroy, 
+  "speex_resampler_process_interleaved_float": speex_resampler_process_interleaved_float, 
+  "__errno_location": __errno_location, 
+  "stackSave": stackSave, 
+  "stackRestore": stackRestore, 
+  "stackAlloc": stackAlloc, 
+  "malloc": dlmalloc, 
+  "free": dlfree, 
+  "__indirect_function_table": FUNCTION_TABLE, 
   "dynCall_jiji": legalstub$dynCall_jiji
 };
 }
@@ -20664,12 +20664,12 @@ function preRun() {
 
 function initRuntime() {
   runtimeInitialized = true;
-
+  
   callRuntimeCallbacks(__ATINIT__);
 }
 
 function preMain() {
-
+  
   callRuntimeCallbacks(__ATMAIN__);
 }
 
@@ -20876,7 +20876,7 @@ function getBinaryPromise() {
       }
     }
   }
-
+    
   // Otherwise, getBinary should be able to get it synchronously
   return Promise.resolve().then(function() { return getBinary(wasmBinaryFile); });
 }
@@ -20970,7 +20970,7 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-
+  
 };
 
 
@@ -21046,7 +21046,7 @@ var ASM_CONSTS = {
   function _emscripten_get_heap_size() {
       return HEAPU8.length;
     }
-
+  
   function abortOnCannotGrowMemory(requestedSize) {
       abort('OOM');
     }
@@ -21387,3 +21387,4 @@ run();
 
 return Module;
 }, 'OpusDecoderLib'));//END: UMD wrapper
+
