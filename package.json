@@ -4,7 +4,7 @@
   "description": "",
   "main": "OggOpusDecoder.js",
   "scripts": {
-    "dev-server": "http-server"
+    "dev": "http-server"
   },
   "author": "Luke Abbott",
   "license": "ISC",
