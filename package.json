@@ -1,0 +1,14 @@
+{
+  "name": "luke-opus-decoder",
+  "version": "0.0.1",
+  "description": "",
+  "main": "OggOpusDecoder.js",
+  "scripts": {
+    "dev-server": "http-server"
+  },
+  "author": "Luke Abbott",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^13.0.2"
+  }
+}
